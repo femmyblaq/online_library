@@ -3,8 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import axios from "axios";
-//import './styles/main.scss'   // import global app style file
+import Vuelidate from "vuelidate";
+import Notification from "vue-notification";
 
+Vue.use(Vuelidate);
+Vue.use(Notification);
 Vue.config.productionTip = false;
 
 axios.defaults.baseURL =

@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+  <div id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark px-lg-5 py-lg-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Online <i class="fas fa-landmark fa-3"></i><br />
-          <span style="font-size: 1rem">LIBRARY</span></a
-        >
+        <router-link :to="{ name: Home }" class="navbar-brand">
+          <img
+            class="w-50 h-50"
+            src="../components/Category_img/icons/LibraryLogoWhite.png"
+            alt=""
+          />
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,22 +22,51 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <router-link tag="li" to="/" class="nav-item nav-link active"
+            <router-link
+              tag="li"
+              to="/"
+              class="nav-item nav-link"
+              active-class="active"
               >Home
             </router-link>
-            <router-link tag="li" to="/about" class="nav-item nav-link">
+            <router-link
+              tag="li"
+              to="/about"
+              class="nav-item nav-link"
+              active-class=""
+            >
               About
             </router-link>
-            <router-link tag="li" to="/about" class="nav-item nav-link">
+            <router-link
+              tag="li"
+              to="/ebook"
+              class="nav-item nav-link"
+              active-class=""
+            >
               Ebook
             </router-link>
-            <router-link tag="li" to="/about" class="nav-item nav-link">
+            <router-link
+              tag="li"
+              to="/audiobook"
+              class="nav-item nav-link"
+              active-class=""
+            >
               AudioBooks
             </router-link>
-            <router-link tag="li" to="/blog" class="nav-item nav-link">
+            <router-link
+              tag="li"
+              to="/blog"
+              class="nav-item nav-link"
+              active-class=""
+            >
               Blog
             </router-link>
-            <router-link tag="li" to="/contact" class="nav-item nav-link">
+            <router-link
+              tag="li"
+              to="/contact"
+              class="nav-item nav-link"
+              active-class=""
+            >
               Contact Us
             </router-link>
             <router-link
@@ -49,11 +81,50 @@
     </nav>
   </div>
 </template>
-
+<script>
+export default {};
+</script>
 <style lang="scss">
 @import "../assets/variable.scss";
 .navbar {
   background-color: $background-color;
   font-family: $font-family;
+}
+.navbar .collapse ul li {
+  font-family: $font-family;
+  cursor: pointer;
+}
+@media (min-width: 315px) and (max-width: 768px) {
+  .navbar {
+    padding: 8px !important;
+  }
+  #header .container-fluid .navbar-brand {
+    font-size: 1rem !important;
+  }
+  #header .container-fluid .navbar-brand span {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 12px !important;
+  }
+  #header .container-fluid .navbar-brand {
+    font-size: 1.3rem !important;
+  }
+  #header .container-fluid .navbar-brand span {
+    font-size: 1.3rem !important;
+  }
+}
+@media (min-width: 280px) and (max-width: 653px) {
+  .navbar {
+    padding: 8px !important;
+  }
+  #header .container-fluid .navbar-brand {
+    font-size: 0.8rem !important;
+  }
+  #header .container-fluid .navbar-brand span {
+    font-size: 0.8rem !important;
+  }
 }
 </style>
