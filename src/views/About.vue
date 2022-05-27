@@ -1,33 +1,31 @@
 <template>
   <div id="about" class="container-fluid p-0 m-0">
-    <div class="overlay-container">
-      <div class="overlay"></div>
-      <img
+    <div class="overlay-container bg-dark" style="height: 15rem">
+      <!-- <div class="overlay" ></div> -->
+      <!-- <img
         src="../../public/img/lib-imgVI.jpg"
         class="w-100"
-        style="height: 15rem"
+        
         alt=""
-      />
+      /> -->
       <div class="text">
         <h5 class="text-white">Home <i class="fa fas-arrow"></i> About</h5>
         <h3 class="text-white">Learning Made Easy!</h3>
       </div>
     </div>
 
-    <div class="row w-100 first-row p-0 my-5">
-      <div class="col-lg-6 col-md-6 col-sm-12 p-4 dn-sm">
-        <div class="overlay-container-second">
-          <div class="overlay-second"></div>
-          <img
-            src="../../public/img/lib-imgIV.jpg"
-            class="overlay-img"
-            alt=""
-          />
-        </div>
+    <div class="row m-0 p-5 my-5">
+      <div class="col-lg-6 col-sm-12">
+        <img
+          src="../../public/img/StudentLibraryComplete.png"
+          class=""
+          style="width: 600px"
+          alt=""
+        />
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 p-4">
-        <h1 class="text-primary mb-3">About Online Library University</h1>
-        <p class="text-dark">
+      <div class="col-lg-6 col-sm-12">
+        <h1 class="mb-3">About Online Library University</h1>
+        <p class="text-muted">
           Online Library University is a software that uses to maintain the
           record of the library. It contains work like the number of available
           books in the library, the number of books are issued or returning or
@@ -36,20 +34,22 @@
           books & record books borrowed by the members, with the respective
           submission dates.
         </p>
-        <p>
+        <p class="text-muted">
           We found out that must student don't have the priveledge to further
           their education, due to financial situation. Online Library University
           provides access for all the student to further vitually with their
           smart phones. And would be given steps on how to go about their
           studies.
         </p>
-        <p>
+        <p class="text-muted">
           Moreover, it also reduces the manual record burden of the librarian.
           Library management system allows the librarian to maintain library
           resources in a more operative manner that will help to save their
           time.
         </p>
-        <p>
+      </div>
+      <div class="col-12">
+        <p class="text-muted">
           It is also convenient for the librarian to manage the process of books
           allotting and making payment. Library management system is also useful
           for students as well as a librarian to keep the constant track of the
@@ -58,11 +58,13 @@
           use system for managing all the processes involved in a Library in the
           most effective ways.
         </p>
-        This system will reduce all the manual work and the whole process can be
-        managed just through single clicks and edits. There will be no headache
-        and doubtfulness of storing the data securely and searching the records
-        of any individual afterward.
-        <p>
+        <p class="text-muted">
+          This system will reduce all the manual work and the whole process can
+          be managed just through single clicks and edits. There will be no
+          headache and doubtfulness of storing the data securely and searching
+          the records of any individual afterward.
+        </p>
+        <p class="text-muted">
           Any book seeker can rent a book just by signing in with their details,
           and return it with the date of returning. The staff can also
           facilitate themselves with some extra authorizations and privileges.
@@ -70,26 +72,25 @@
           any chances of mistakes.
         </p>
       </div>
-
       <div class="col-lg-6 col-md-6 col-sm-12 p-4 dn-sm">
         <div class="overlay-container-second">
-          <div class="overlay-second"></div>
+          <!-- <div class="overlay-second"></div>
           <img
             src="../../public/img/Audiobook.jpg"
             class="overlay-img"
             alt=""
-          />
+          /> -->
         </div>
       </div>
       <div class="col-lg-6 mx-auto col-md-6 col-sm-12 p-4">
-        <h1 class="text-primary">Online Library AudioBooks</h1>
-        <p>
+        <h1>Online Library AudioBooks</h1>
+        <p class="text-muted">
           An audiobook (or a talking book) is a recording of a book or other
           work being read out loud. A reading of the complete text is described
           as "unabridged", while readings of a shorter version are an
           abridgement.
         </p>
-        <ul>
+        <ul class="text-muted">
           <li>It improves pronunciation and fluency</li>
           <li>Helps to improve time management</li>
           <li>Builds Critical Listening skills</li>
@@ -116,42 +117,42 @@
       </div>
       <div class="col-lg-6 p-4 dn-sm col-md-6 col-sm-12">
         <div class="overlay-container-second">
-          <div class="overlay-second"></div>
+          <!-- <div class="overlay-second"></div>
           <img
             src="../../public/img/objective-img.jpg"
             class="overlay-img"
             alt=""
-          />
+          /> -->
         </div>
       </div>
       <div class="col-lg-6 p-4 col-md-6 col-sm-12">
         <h1>Our Objectives</h1>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
         </p>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
         </p>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
         </p>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
         </p>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
         </p>
-        <p>
+        <p class="text-muted">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
           voluptates culpa molestias facere nulla quia neque aperiam soluta
           molestiae!
@@ -163,20 +164,20 @@
 
 <style lang="scss" scoped>
 @import "../assets/variable.scss";
-.overlay-container {
-  position: relative;
-  width: 100%;
-}
-#about .overlay-container {
-  .overlay {
-    opacity: 50%;
-    position: absolute;
-    background-color: $background-color;
-    z-index: $z-index;
-    width: 100%;
-    height: 15rem;
-  }
-}
+// .overlay-container {
+//   position: relative;
+//   width: 100%;
+// }
+// #about .overlay-container {
+//   .overlay {
+//     opacity: 50%;
+//     position: absolute;
+//     background-color: $background-color;
+//     z-index: $z-index;
+//     width: 100%;
+//     height: 15rem;
+//   }
+// }
 #about .text {
   position: absolute;
   top: 20%;
@@ -199,31 +200,31 @@
 // #about img {
 //   float: left;
 // }
-#about .first-row .overlay-container-second {
-  position: relative;
-  width: 100%;
-}
-#about .first-row .overlay-container-second {
-  .overlay-second {
-    margin-top: 68px;
-    opacity: 50%;
-    position: absolute;
-    background-color: $background-color;
-    z-index: $z-index;
-    width: 650px;
-    height: 450px;
-  }
-  .overlay-img {
-    margin-top: 68px;
-    width: 650px;
-    height: 450px;
-    position: absolute;
-    cursor: pointer;
-  }
-  &.overlay-img {
-    opacity: 0;
-  }
-}
+// #about .first-row .overlay-container-second {
+//   position: relative;
+//   width: 100%;
+// }
+// #about .first-row .overlay-container-second {
+//   .overlay-second {
+//     margin-top: 68px;
+//     opacity: 50%;
+//     position: absolute;
+//     background-color: $background-color;
+//     z-index: $z-index;
+//     width: 650px;
+//     height: 450px;
+//   }
+//   .overlay-img {
+//     margin-top: 68px;
+//     width: 650px;
+//     height: 450px;
+//     position: absolute;
+//     cursor: pointer;
+//   }
+//   &.overlay-img {
+//     opacity: 0;
+//   }
+// }
 @media (min-width: 315px) and (max-width: 480px) {
   #about .overlay-container {
     .overlay {

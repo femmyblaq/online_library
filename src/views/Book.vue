@@ -40,8 +40,3 @@ export default {
   },
 };
 </script>
-
-// const books = this.$store.getters.books; // console.log("HHHH",
-this.$route.params.id, books); // const findBook = books.find( // (book) =>
-book.id == Number(this.$route.params.id) // ); // if (findBook != undefined) {
-// this.book = findBook; // }

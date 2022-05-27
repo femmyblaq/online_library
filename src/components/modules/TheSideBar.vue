@@ -6,42 +6,47 @@
       <div class="sidebar-content vh-100 bg-primary shadow">
         <div class="w-75 p-3 m-auto brand d-flex">
           <img
-            src="../../components/Category_img/icons/LibraryLogoWhite.png"
+            src="../../assets/Category_img/icons/LibraryLogoWhite.png"
             alt=""
           />
-          <h2 class="text-white fw-bolder ms-auto mt-2 d-lg-none">X</h2>
         </div>
 
         <ul class="list-unstyled mt-2">
           <router-link
             tag="li"
+            class="p-2"
             to="/dashboard"
-            class="links mb-2 p-2 text-decoration-none fs-6 text-white"
             active-class="active"
-            ><span class="me-2"><i class="fas fa-home"></i></span>
-            Home</router-link
+            ><a class="links mb-2 text-decoration-none fs-6 text-white"
+              ><span class="me-2"><i class="fas fa-home"></i></span> Home</a
+            ></router-link
+          >
+          <router-link tag="li" class="p-2" to="/category" active-class="active"
+            ><a class="links mb-2 text-decoration-none fs-6 text-white"
+              ><span class="me-2"
+                ><i class="fa fa-list-alt" aria-hidden="true"></i
+              ></span>
+              Categories</a
+            ></router-link
           >
           <router-link
             tag="li"
-            to="/categories"
-            class="links mb-2 p-2 text-decoration-none fs-6 text-white"
-            ><span class="me-2"
-              ><i class="fa fa-list-alt" aria-hidden="true"></i
-            ></span>
-            Categories</router-link
-          >
-          <router-link
-            tag="li"
+            class="p-2"
             to="/dashboard"
-            class="links mb-2 p-2 text-decoration-none fs-6 text-white"
-            ><span class="me-2"><i class="far fa-bookmark"></i></span> Saved for
-            Later</router-link
+            active-class="active"
+            ><a class="links mb-2 text-decoration-none fs-6 text-white"
+              ><span class="me-2"><i class="far fa-bookmark"></i></span> Saved
+              for Later</a
+            ></router-link
           >
           <router-link
             tag="li"
+            class="p-2"
             to="/dashboard"
-            class="links mb-2 p-2 text-decoration-none fs-6 text-white"
-            >Dashboard</router-link
+            active-class="active"
+            ><a class="links mb-2 text-decoration-none fs-6 text-white"
+              >Account</a
+            ></router-link
           >
         </ul>
       </div>
@@ -51,11 +56,11 @@
 </template>
 <script>
 export default {
-  computed: {
-    mobileNavs() {
-      return this.$store.getters.mobileNav;
-    },
-  },
+  // computed: {
+  //   closeSideBar() {
+  //     return this.$store.dispatch("toggleNav");
+  //   },
+  //},
 };
 </script>
 <style lang="scss">
@@ -80,12 +85,6 @@ export default {
 }
 #sidebar .list-unstyled li:hover {
   background-color: #ac7d0c;
-}
-#sidebar .list-unstyled li span {
-  padding: 4px;
-  border-radius: 4px;
-  background-color: #ac7d0c;
-  color: #fff;
 }
 // Animating the sideBar
 

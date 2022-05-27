@@ -1,22 +1,27 @@
 <template>
-  <div class="row p-0 m-0">
+  <div id="book_category" class="row p-0 m-0">
     <div class="col-lg-3 col-md-4 col-sm-6">
-      <div class="card shadow m-3 bg-light">
-        <div class="card-body text-center">
-          <img
-            src="../components/Category_img/icons/icons8-physics-50.png"
-            alt=""
-            style="width: 80px; height: 80px"
-          />
-          <h4>Physics</h4>
+      <router-link
+        to="/computer_science"
+        class="text-decoration-none text-dark"
+      >
+        <div class="card shadow m-3 bg-light">
+          <div class="card-body text-center">
+            <img
+              src="../assets/Category_img/icons/icons8-physics-50.png"
+              alt=""
+              style="width: 80px; height: 80px"
+            />
+            <h4>Physics</h4>
+          </div>
         </div>
-      </div>
+      </router-link>
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6">
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/architecture-colour.svg"
+            src="../assets/Category_img/architecture-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -28,7 +33,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-biotech-50.png"
+            src="../assets/Category_img/icons/icons8-biotech-50.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -40,7 +45,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/mathematics-colour.svg"
+            src="../assets/Category_img/mathematics-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -52,7 +57,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-economics-64.png"
+            src="../assets/Category_img/icons/icons8-economics-64.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -64,7 +69,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/design-colour.svg"
+            src="../assets/Category_img/design-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -76,7 +81,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/art-colour.svg"
+            src="../assets/Category_img/art-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -88,7 +93,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/history-colour.svg"
+            src="../assets/Category_img/history-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -100,7 +105,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/business-colour.svg"
+            src="../assets/Category_img/business-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -112,7 +117,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/social-sciences-colour.svg"
+            src="../assets/Category_img/social-sciences-colour.svg"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -124,7 +129,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-chef-64.png"
+            src="../assets/Category_img/icons/icons8-chef-64.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -136,7 +141,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-chemistry-49.png"
+            src="../assets/Category_img/icons/icons8-chemistry-49.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -148,7 +153,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-geology-64.png"
+            src="../assets/Category_img/icons/icons8-geology-64.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -160,7 +165,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-gps-antenna-50.png"
+            src="../assets/Category_img/icons/icons8-gps-antenna-50.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -172,7 +177,7 @@
       <div class="card shadow m-3 bg-light">
         <div class="card-body text-center">
           <img
-            src="../components/Category_img/icons/icons8-mechanic-64.png"
+            src="../assets/Category_img/icons/icons8-mechanic-64.png"
             alt=""
             style="width: 80px; height: 80px"
           />
@@ -183,6 +188,12 @@
   </div>
 </template>
 <style lang="scss">
+#book_category .card {
+  &:hover {
+    border: 2px solid #ac7d0c;
+    cursor: pointer;
+  }
+}
 @media (min-width: 315px) and (max-width: 480px) {
   .card-body {
     display: inline-flex !important;

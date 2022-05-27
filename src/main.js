@@ -5,6 +5,7 @@ import store from "./store";
 import axios from "axios";
 import Vuelidate from "vuelidate";
 import Notification from "vue-notification";
+import "../src/assets/variable.scss";
 
 Vue.use(Vuelidate);
 Vue.use(Notification);

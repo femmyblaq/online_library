@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import axios from "../axios-auth";
 import globalAxios from "axios";
 import book_store from "./modules/book_store";
+import ebook_store from "./modules/ebook_store";
 import router from "../router/index";
 
 Vue.use(Vuex);
@@ -188,5 +189,6 @@ export default new Vuex.Store({
   },
   modules: {
     book_store,
+    ebook_store,
   },
 });

@@ -9,16 +9,22 @@ const state = {
 
 const mutations = {
   SET_BOOKS(state, books) {
-    state.books = books;
+    for (let i = 0; i < books.lenght; i++) {
+      for (let j = 0; j < books[i].computerScience.length; j++) {
+        state.books = books[i].computerScience[j];
+        console.log(books[i].computerScience[j]);
+      }
+    }
   },
   CHECK_SCREEN(state) {
     state.windowWidth = window.innerWidth;
-    if (state.windowWidth <= 750) {
-      // state.mobile = true;
+    if (state.windowWidth >= 750) {
+      state.mobile = false;
+      state.mobileNav = true;
+    } else {
+      state.mobile = true;
       state.mobileNav = false;
     }
-    // state.mobile = false;
-    state.mobileNav = true;
 
     console.log(
       "Mutation windowWidth",
@@ -26,10 +32,17 @@ const mutations = {
       state.mobile,
       state.mobileNav
     );
-    return;
   },
   TOGGLE_NAV(state) {
     state.mobileNav = !state.mobileNav;
+  },
+  TOGGLE_MOBO(state) {
+    window.document.addEventListener("click", () => {
+      if (state.mobile) {
+        state.mobileNav = false;
+      }
+      console.log(state.mobileNav, state.mobile);
+    });
   },
 };
 
@@ -43,6 +56,9 @@ const actions = {
   toggleNav: ({ commit }) => {
     commit("TOGGLE_NAV");
   },
+  toggleMobile: ({ commit }) => {
+    commit("TOGGLE_MOBO");
+  },
 };
 
 const getters = {
@@ -52,9 +68,9 @@ const getters = {
   mobileNav: (state) => {
     return state.mobileNav;
   },
-  // mobile: (state) => {
-  //   return state.mobile;
-  // },
+  mobile: (state) => {
+    return state.mobile;
+  },
 };
 
 export default {

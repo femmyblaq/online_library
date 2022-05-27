@@ -5,7 +5,7 @@
         <router-link :to="{ name: Home }" class="navbar-brand">
           <img
             class="w-50 h-50"
-            src="../components/Category_img/icons/LibraryLogoWhite.png"
+            src="../../assets/Category_img/icons/LibraryLogoWhite.png"
             alt=""
           />
         </router-link>
@@ -22,52 +22,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <router-link
-              tag="li"
-              to="/"
-              class="nav-item nav-link"
-              active-class="active"
-              >Home
+            <router-link tag="li" to="/" active-class="active"
+              ><a class="nav-item nav-link">Home</a>
             </router-link>
-            <router-link
-              tag="li"
-              to="/about"
-              class="nav-item nav-link"
-              active-class=""
-            >
-              About
+            <router-link tag="li" to="/about" active-class="active">
+              <a class="nav-item nav-link">About</a>
             </router-link>
-            <router-link
-              tag="li"
-              to="/ebook"
-              class="nav-item nav-link"
-              active-class=""
-            >
-              Ebook
+            <router-link tag="li" to="/ebook" active-class="active">
+              <a class="nav-item nav-link">Ebook</a>
             </router-link>
-            <router-link
-              tag="li"
-              to="/audiobook"
-              class="nav-item nav-link"
-              active-class=""
-            >
-              AudioBooks
+            <router-link tag="li" to="/audiobook" active-class="active">
+              <a class="nav-item nav-link">AudioBooks</a>
             </router-link>
-            <router-link
-              tag="li"
-              to="/blog"
-              class="nav-item nav-link"
-              active-class=""
-            >
-              Blog
+            <router-link tag="li" to="/blog" active-class="active">
+              <a class="nav-item nav-link">Blog</a>
             </router-link>
-            <router-link
-              tag="li"
-              to="/contact"
-              class="nav-item nav-link"
-              active-class=""
-            >
-              Contact Us
+            <router-link tag="li" to="/contact" active-class="active">
+              <a class="nav-item nav-link">Contact Us</a>
             </router-link>
             <router-link
               tag="button"
@@ -85,7 +56,7 @@
 export default {};
 </script>
 <style lang="scss">
-@import "../assets/variable.scss";
+@import "../../assets/variable.scss";
 .navbar {
   background-color: $background-color;
   font-family: $font-family;

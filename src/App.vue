@@ -6,7 +6,10 @@
           'Login',
           'Register',
           'Dashboard',
+          'ComputerScience',
           'Book',
+          'Home',
+          'TheLayout',
           'Categories',
           'help',
         ].includes($route.name)
@@ -19,9 +22,12 @@
           'Login',
           'Register',
           'Dashboard',
+          'ComputerScience',
           'Book',
+          'Home',
           'Ebook',
           'Audiobook',
+          'TheLayout',
           'Categories',
           'help',
         ].includes($route.name)
@@ -33,8 +39,8 @@
 
 <style lang="scss"></style>
 <script>
-import appHeader from "./Header/header.vue";
-import appFooter from "./Footer/Footer.vue";
+import appHeader from "./components/Header/header.vue";
+import appFooter from "./components/Footer/Footer.vue";
 export default {
   components: {
     appHeader,

@@ -11,10 +11,13 @@
       </div>
       <div class="card-body pt-4 pb-0">
         <div class="card-text">
-          <p class="m-0" style="font-size: 0.8rem">{{ book.type }}</p>
+          <p class="m-0" style="font-size: 0.8rem">
+            {{ book.type }}
+          </p>
           <strong
-            ><h5 class="m-0">{{ book.bookTitle }}</h5>
-            <small class="text-secondary">{{ book.bookAuthor }}</small></strong
+            ><h5 class="m-0">
+              {{ book.bookTitle }}
+            </h5></strong
           >
           <div class="d-flex justify-content-between">
             <div>
@@ -42,8 +45,8 @@ export default {
 </script>
 <style lang="scss">
 #book img {
-  width: 180px;
-  height: 230px;
+  max-width: 180px;
+  max-height: 230px;
   margin: auto;
 }
 #book .img-background {

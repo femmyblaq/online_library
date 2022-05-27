@@ -2,10 +2,10 @@
   <div id="footer" class="">
     <div class="footer-top w-100 h-75 m-0 py-4 container-fluid row p-0 m-0">
       <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 logo">
-        <h3 class="text-white ps-3 mb-3" style="border-left: 5px solid #ffdf00">
-          Online <i class="fas fa-landmark fa-3"></i><br />
-          <span style="font-size: 2rem">LIBRARY</span>
-        </h3>
+        <img
+          src="../../assets/Category_img/icons/LibraryLogoWhite.png"
+          alt=""
+        />
         <p class="text-white">
           Online Library Management System is Library Automation Software that
           helps the students in better their learning by providing quick access
@@ -14,27 +14,27 @@
         </p>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white links">
-        <h5 class="fw-bold position-relative pb-3">USEFUL LINKS</h5>
+        <h5 class="fw-bold pb-3">USEFUL LINKS</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="" class="text-decoration-none text-light">Home</a>
+            <a href="" class="text-decoration-none">Home</a>
           </li>
           <li class="mb-2">
-            <a href="" class="text-decoration-none text-light">Ebook</a>
+            <a href="" class="text-decoration-none">Ebook</a>
           </li>
           <li class="mb-2">
-            <a href="" class="text-decoration-none text-light">AudioBooks</a>
+            <a href="" class="text-decoration-none">AudioBooks</a>
           </li>
           <li class="mb-2">
-            <a href="" class="text-decoration-none text-light">About Us</a>
+            <a href="" class="text-decoration-none">About Us</a>
           </li>
           <li class="mb-2">
-            <a href="" class="text-decoration-none text-light">Contact Us</a>
+            <a href="" class="text-decoration-none">Contact Us</a>
           </li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white contact">
-        <h5 class="fw-bold position-relative pb-3">CONTACT US</h5>
+        <h5 class="fw-bold pb-3">CONTACT US</h5>
         <p class="mt-3">
           No 9, Chief fatai aremu street, <br />
           Ajegunle Apapa, <br />Lagos, Nigeria.
@@ -50,7 +50,7 @@
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white newsletter">
-        <h5 class="fw-bold position-relative pb-3">OUR NEWSLETTER</h5>
+        <h5 class="fw-bold pb-3">OUR NEWSLETTER</h5>
         <p class="text-white py-lg-3">
           Stay informed with what we have been unto.
         </p>
@@ -76,52 +76,29 @@
             Copy right 2022 <span class="fw-bold">Online Library.</span> All
             Right Reserved
           </p>
-          <p class="text-white">
-            Designed by <span style="color: #0000ff">Dev HY</span>
-          </p>
+          <p class="text-white">Designed by <span>Dev HY</span></p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss">
-@import "../assets/variable.scss";
+@import "../../assets/variable.scss";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto&display=swap");
 $background-color: #00001f;
 #footer {
   background-color: $background-color !important;
 }
-#footer .footer-top h5::before,
-.footer-top h5::after {
-  content: "";
-  height: 2px;
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
+#footer .footer-top h5 {
+  color: #fddd2a;
 }
-#footer .footer-top h5::before {
-  background: #ccc;
-  right: 0;
-}
-#footer .footer-top h5::after {
-  width: 73px;
-  background: #ffdf00;
-}
-#footer .footer-top p,
-li,
-a {
-  font-family: $font-family;
+#footer p,
+#footer li,
+#footer a {
   font-size: 0.9rem;
-}
-#footer .row .links ul li {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  color: #bfbffa !important;
 }
 #footer .footer-bottom div p {
-  font-size: 0.8rem;
-  // font-family: $font-family !important;
-  font-family: "open-sans", "Roboto", sans-serif;
 }
 
 @media (min-width: 315px) and (max-width: 480px) {

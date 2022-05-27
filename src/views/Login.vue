@@ -5,11 +5,13 @@
         <div class="card w-50 m-0">
           <div class="card-body p-4">
             <div class="card-title mb-4 d-flex justify-content-center">
-              <img
-                class="w-75"
-                src="../components/Category_img/icons/LibraryLogo.png"
-                alt=""
-              />
+              <router-link :to="{ name: 'Home' }">
+                <img
+                  style="width: 150px"
+                  src="../assets/Category_img/icons/LibraryLogo.png"
+                  alt=""
+                />
+              </router-link>
             </div>
             <form @submit.prevent="onSubmit">
               <div class="form-group" :class="{ invalid: $v.email.$error }">
@@ -59,10 +61,6 @@
                 Log In
               </button>
             </form>
-            <p class="text-secondary text-center p-3">
-              New to online Library?
-              <router-link tag="a" to="/register"> Create Account</router-link>
-            </p>
           </div>
         </div>
         <div
@@ -147,125 +145,125 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/variable.scss";
-.form-group.invalid input {
-  border: 1px solid #ff0000 !important;
-  background-color: #fda1a4;
-}
-.form-group.invalid input:focus {
-  border-bottom: 2px solid #ff0000 !important;
-}
-.form-group.invalid label {
-  color: #ff0000;
-}
-.form-control {
-  border: none !important;
-  border-radius: 0;
-  border-bottom: 2px solid #f3f3f7 !important;
-  background-color: rgb(250, 244, 244) !important;
-}
-.form-control:focus {
-  box-shadow: none;
-  border-bottom: 2px solid #00001f !important;
-  background-color: rgb(243, 237, 237) !important;
-}
-.form-control:focus,
-label {
-  color: #00001f;
-}
-label {
-  font-family: $font-family;
-  font-size: $font-size;
-  // color: #b3b3d3;
-}
-input {
-  font-family: $font-family;
-  font-size: $font-size;
-}
-p {
-  font-family: $font-family;
-  font-size: $font-size;
-}
-.btn {
-  font-family: $font-family;
-}
-.btn-primary,
-.bg-primary {
-  background-color: #00001f !important;
-}
-.text-primary {
-  color: $primary-color !important;
-}
-@media (min-width: 280px) and (max-width: 653px) {
-  #login {
-    height: 100vh;
-  }
-  #login .card-group {
-    width: 100% !important;
-    display: flex;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: auto 10px !important;
-  }
-  #login .card-group .card {
-    width: 100% !important;
-  }
-  #login #card-two {
-    display: none !important;
-  }
-  #login .card .card-title {
-    margin-bottom: 20px !important;
-  }
-  #login .card .card-title h3 {
-    font-size: 1.4rem !important;
-  }
-  #login .card .card-title span {
-    line-height: 0.8;
-    font-size: 1.5rem !important;
-  }
-}
-@media (min-width: 315px) and (max-width: 578px) {
-  #login {
-    height: 100vh;
-  }
-  #login .card-group {
-    width: 100% !important;
-    display: flex;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: auto 10px !important;
-  }
-  #login .card-group .card {
-    width: 100% !important;
-  }
-  #login #card-two {
-    display: none !important;
-  }
-  #login .card .card-title {
-    margin-bottom: 20px !important;
-  }
-  #login .card .card-title h3 {
-    font-size: 1.9rem !important;
-  }
-  #login .card .card-title span {
-    line-height: 0.8;
-  }
-}
-@media (min-width: 768px) and (max-width: 1180px) {
-  #login {
-    height: 100vh !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-  #login .card-group {
-    width: 100% !important;
-    margin: 0 40px;
-  }
-  #login .card .card-title h3 {
-    font-size: 1.6rem !important;
-  }
-  #login .card .card-title span {
-    font-size: 1.7rem !important;
-  }
-}
+// @import "../assets/variable.scss";
+// .form-group.invalid input {
+//   border: 1px solid #ff0000 !important;
+//   background-color: #fda1a4;
+// }
+// .form-group.invalid input:focus {
+//   border-bottom: 2px solid #ff0000 !important;
+// }
+// .form-group.invalid label {
+//   color: #ff0000;
+// }
+// .form-control {
+//   border: none !important;
+//   border-radius: 0;
+//   border-bottom: 2px solid #f3f3f7 !important;
+//   background-color: rgb(250, 244, 244) !important;
+// }
+// .form-control:focus {
+//   box-shadow: none;
+//   border-bottom: 2px solid #00001f !important;
+//   background-color: rgb(243, 237, 237) !important;
+// }
+// .form-control:focus,
+// label {
+//   color: #00001f;
+// }
+// label {
+//   font-family: $font-family;
+//   font-size: $font-size;
+//   // color: #b3b3d3;
+// }
+// input {
+//   font-family: $font-family;
+//   font-size: $font-size;
+// }
+// p {
+//   font-family: $font-family;
+//   font-size: $font-size;
+// }
+// .btn {
+//   font-family: $font-family;
+// }
+// .btn-primary,
+// .bg-primary {
+//   background-color: #00001f !important;
+// }
+// .text-primary {
+//   color: $primary-color !important;
+// }
+// @media (min-width: 280px) and (max-width: 653px) {
+//   #login {
+//     height: 100vh;
+//   }
+//   #login .card-group {
+//     width: 100% !important;
+//     display: flex;
+//     align-items: center !important;
+//     justify-content: center !important;
+//     margin: auto 10px !important;
+//   }
+//   #login .card-group .card {
+//     width: 100% !important;
+//   }
+//   #login #card-two {
+//     display: none !important;
+//   }
+//   #login .card .card-title {
+//     margin-bottom: 20px !important;
+//   }
+//   #login .card .card-title h3 {
+//     font-size: 1.4rem !important;
+//   }
+//   #login .card .card-title span {
+//     line-height: 0.8;
+//     font-size: 1.5rem !important;
+//   }
+// }
+// @media (min-width: 315px) and (max-width: 578px) {
+//   #login {
+//     height: 100vh;
+//   }
+//   #login .card-group {
+//     width: 100% !important;
+//     display: flex;
+//     align-items: center !important;
+//     justify-content: center !important;
+//     margin: auto 10px !important;
+//   }
+//   #login .card-group .card {
+//     width: 100% !important;
+//   }
+//   #login #card-two {
+//     display: none !important;
+//   }
+//   #login .card .card-title {
+//     margin-bottom: 20px !important;
+//   }
+//   #login .card .card-title h3 {
+//     font-size: 1.9rem !important;
+//   }
+//   #login .card .card-title span {
+//     line-height: 0.8;
+//   }
+// }
+// @media (min-width: 768px) and (max-width: 1180px) {
+//   #login {
+//     height: 100vh !important;
+//     display: flex !important;
+//     align-items: center !important;
+//   }
+//   #login .card-group {
+//     width: 100% !important;
+//     margin: 0 40px;
+//   }
+//   #login .card .card-title h3 {
+//     font-size: 1.6rem !important;
+//   }
+//   #login .card .card-title span {
+//     font-size: 1.7rem !important;
+//   }
+// }
 </style>

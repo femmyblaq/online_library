@@ -8,12 +8,15 @@
         <div class="col-lg-12">
           <div class="card-body">
             <div
-              class="card-title mb-5 d-flex align-items-center justify-content-center"
+              class="card-title mb-3 d-flex align-items-center justify-content-center"
             >
-              <h3 class="ps-3 fw-bolder">
-                Online <i class="fas fa-landmark fa-3"></i><br />
-                <span style="font-size: 2rem">LIBRARY</span>
-              </h3>
+              <router-link :to="{ name: 'Home' }">
+                <img
+                  style="width: 150px"
+                  src="../assets/Category_img/icons/LibraryLogo.png"
+                  alt=""
+                />
+              </router-link>
             </div>
             <form @submit.prevent="onSubmit">
               <div class="row">
@@ -162,7 +165,7 @@
               <button
                 type="submit"
                 :disabled="$v.invalid"
-                class="btn btn-primary w-100 mt-4"
+                class="btn btn-primary w-100 mt-5 rounded-0"
               >
                 Register
               </button>
@@ -275,9 +278,9 @@ export default {
   color: #ff0000;
 }
 #register .form-control {
-  border: none !important;
+  border: 1px solid #00001f !important;
   border-radius: 0;
-  border-bottom: 2px solid #f3f3f7 !important;
+  // border-bottom: 2px solid #f3f3f7 !important;
   background-color: rgb(250, 244, 244) !important;
 }
 #register .form-control:focus {

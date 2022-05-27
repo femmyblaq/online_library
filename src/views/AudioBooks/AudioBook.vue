@@ -5,7 +5,7 @@
         <span
           ><img
             style="width: 90px; height: 100px"
-            src="../../components/Category_img/icons/icons8-headphone-100.png"
+            src="../../assets/Category_img/icons/icons8-headphone-100.png"
             alt="There was suppose to be an image here!"
             class="pb-3 color-white" /></span
         >UDIOBOOK

@@ -1,10 +1,6 @@
 <template>
   <div class="dashboard">
-    <div v-if="toggleMobileNav">
-      <transition name="slides">
-        <appSideBar></appSideBar>
-      </transition>
-    </div>
+    <appSideBar></appSideBar>
     <appHeader></appHeader>
     <main>
       <div
@@ -33,14 +29,24 @@ export default {
   },
   created() {
     const checkScreen = this.$store.dispatch("checkScreenSize");
+    this.$store.dispatch("toggleMobile");
     console.log("checkscreen event >> ", checkScreen);
+
     window.addEventListener("resize", checkScreen);
   },
-  methods: {},
+  methods: {
+    toggleMobile() {
+      return this.$store.dispatch("toggleMobile");
+    },
+  },
 };
 </script>
 
 <style lang="scss">
+.mobile {
+  display: none !important;
+}
+
 .slides-enter-active,
 .slides-enter-leave {
   transition: 0.8s ease all;

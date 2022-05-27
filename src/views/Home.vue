@@ -63,7 +63,7 @@
         <div class="col-lg-2 col-md-4">
           <img
             style="width: 80px; height: 80px"
-            src="../components/Category_img/icons/icons8-open-book-50.png"
+            src="../assets/Category_img/icons/icons8-open-book-50.png"
             alt="There was suppose to be an image here!"
           />
           <p>EBooks</p>
@@ -71,7 +71,7 @@
         <div class="col-lg-2 col-md-4">
           <img
             style="width: 80px; height: 80px"
-            src="../components/Category_img/icons/icons8-headphones-64.png"
+            src="../assets/Category_img/icons/icons8-headphones-64.png"
             alt="There was suppose to be an image here!"
             class="p-0"
           />
@@ -81,7 +81,7 @@
         <div class="col-lg-2 col-md-4">
           <img
             style="width: 80px; height: 80px"
-            src="../components/Category_img/icons/icons8-us-news-100.png"
+            src="../assets/Category_img/icons/icons8-us-news-100.png"
             alt="There was suppose to be an image here!"
           />
           <p>Magazines</p>
@@ -113,7 +113,7 @@
               <div style="width: 250px" class="card m-4 rounded-0">
                 <img
                   style="width: 100px; height: 100px"
-                  src="../components/Category_img/icons/icons8-desk-lamp-100.png"
+                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
                   alt=""
                   class="m-auto"
                 />
@@ -131,7 +131,7 @@
               <div style="width: 250px" class="card m-4 rounded-0">
                 <img
                   style="width: 100px; height: 100px"
-                  src="../components/Category_img/icons/icons8-desk-lamp-100.png"
+                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
                   alt=""
                   class="m-auto"
                 />
@@ -149,7 +149,7 @@
               <div style="width: 250px" class="card m-4 rounded-0">
                 <img
                   style="width: 100px; height: 100px"
-                  src="../components/Category_img/icons/icons8-desk-lamp-100.png"
+                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
                   alt=""
                   class="m-auto"
                 />
@@ -167,7 +167,7 @@
               <div style="width: 250px" class="card m-4 rounded-0">
                 <img
                   style="width: 100px; height: 100px"
-                  src="../components/Category_img/icons/icons8-desk-lamp-100.png"
+                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
                   alt=""
                   class="m-auto"
                 />
@@ -197,6 +197,8 @@
     <div class="books p-5 bg-light">
       <app-books></app-books>
     </div>
+    <!-- What People say in the comment section  -->
+    <WhatPeopleSay />
     <div id="pricing">
       <div class="row w-50 mx-auto my-5">
         <div class="text-center">
@@ -230,28 +232,30 @@
         </div>
       </div>
     </div>
+    <appStaff />
     <div id="faq" class="row p-0 my-5 mx-0 bg-light">
       <div class="col-lg-6 m-auto">
         <h1 class="text-center display-5">FAQ</h1>
         <ul class="list-unstyled">
           <li class="py-2">
-            <span class="fs-4 text-secondary">+</span>
-            <a
-              class="text-decoration-none d-flex d-inline"
-              data-bs-toggle="collapse"
-              href="#collapseExample"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              <p class="ps-3 fs-5 text-dark m-auto">
-                How do we understand some books without we been thought, for
-                example Mathematics?
-              </p>
-            </a>
-
+            <div class="d-inline-flex">
+              <span class="fs-4 text-secondary">+</span>
+              <a
+                class="text-decoration-none"
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <p class="ps-3 fs-5 m-auto">
+                  How do we understand some books without we been thought, for
+                  example Mathematics?
+                </p>
+              </a>
+            </div>
             <ul class="collapse px-4 list-unstyled" id="collapseExample">
-              <li>
+              <li class="ps-5 mt-3">
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Animi, saepe velit doloribus non iure recusandae porro sit eum
@@ -270,14 +274,14 @@
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5 text-dark">
+              <p class="mb-0 ps-3 fs-5">
                 After learning according to the steps your are giving us, as if
                 we are in University, Are we to write test or exams online?
               </p></a
             >
             <ul class="collapse px-4 list-unstyled" id="collapseExample2">
               <li>
-                <p>
+                <p class="ps-5 mt-3">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Dolorum fugiat accusamus et. Totam id sequi sed quibusdam
                   accusamus eveniet quia neque sunt incidunt excepturi, ea quasi
@@ -298,13 +302,13 @@
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5 text-dark">
+              <p class="mb-0 ps-3 fs-5">
                 Won't they be free trier for at least a month?
               </p></a
             >
             <ul class="collapse px-4 list-unstyled" id="collapseExample3">
               <li>
-                <p>
+                <p class="ps-5 mt-3">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Dolorum fugiat accusamus et. Totam id sequi sed quibusdam
                   accusamus eveniet quia neque sunt incidunt excepturi, ea quasi
@@ -325,13 +329,13 @@
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5 text-dark">
+              <p class="mb-0 ps-3 fs-5">
                 would any of the books be downloadable for quick uses?
               </p></a
             >
             <ul class="collapse px-4 list-unstyled" id="collapseExample4">
               <li>
-                <p>
+                <p class="ps-5 mt-3">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Dolorum fugiat accusamus et. Totam id sequi sed quibusdam
                   accusamus eveniet quia neque sunt incidunt excepturi, ea quasi
@@ -352,13 +356,13 @@
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5 text-dark">
+              <p class="mb-0 ps-3 fs-5">
                 What if we are no longer interested in Subscribing anymore?
               </p></a
             >
             <ul class="collapse px-4 list-unstyled" id="collapseExample4">
               <li>
-                <p>
+                <p class="ps-5 mt-3">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Dolorum fugiat accusamus et. Totam id sequi sed quibusdam
                   accusamus eveniet quia neque sunt incidunt excepturi, ea quasi
@@ -378,11 +382,16 @@
 
 <script>
 import appBooks from "../views/Books/Books.vue";
+import WhatPeopleSay from "./Student_Comments/WhatPeopleSays.vue";
 import appBooksCategories from "../views/BookCategory.vue";
+import appStaff from "../views/Staffs.vue";
+
 export default {
   components: {
     appBooks,
+    WhatPeopleSay,
     appBooksCategories,
+    appStaff,
   },
 };
 </script>
@@ -434,7 +443,8 @@ export default {
 #faq span {
   border: 2px solid #303030;
   border-radius: 10px;
-  padding: 5px 15px;
+  padding: 0 15px;
+  max-height: 40px;
 }
 // Screen sizes Responsiveness
 @media (min-width: 315px) and (max-width: 480px) {

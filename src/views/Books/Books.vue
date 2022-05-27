@@ -12,6 +12,9 @@ export default {
       return this.$store.getters.books;
     },
   },
+  created() {
+    console.log("BBBBBOOOKKKS", this.books);
+  },
   components: {
     appBook,
   },
