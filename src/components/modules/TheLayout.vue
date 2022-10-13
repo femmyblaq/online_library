@@ -1,66 +1,175 @@
 <template>
-  <div class="dashboard">
-    <appSideBar></appSideBar>
-    <appHeader></appHeader>
-    <main>
-      <div
-        :class="{ width: !toggleMobileNav }"
-        class="content-in-main position-absolute end-0"
-        style="top: 60px; border: 1px solid #000; height: 92vh; width: 78%"
-      >
-        <router-view></router-view>
-      </div>
-    </main>
+  <div id="dashboard">
+    <Sidebar />
+    <Dasheader />
+    <MainView />
   </div>
 </template>
 
 <script>
-import appSideBar from "./TheSideBar.vue";
-import appHeader from "./TheHeader.vue";
+import Dasheader from "../modules/TheHeader.vue";
+import Sidebar from "../modules/TheSideBar.vue";
+import MainView from "./TheMainView.vue";
 export default {
   components: {
-    appSideBar,
-    appHeader,
+    Dasheader,
+    Sidebar,
+    MainView,
   },
   computed: {
-    toggleMobileNav() {
-      return this.$store.getters.mobileNav;
+    toggleSideBar() {
+      return this.$store.getters.toggleSide;
     },
   },
   created() {
-    const checkScreen = this.$store.dispatch("checkScreenSize");
-    this.$store.dispatch("toggleMobile");
-    console.log("checkscreen event >> ", checkScreen);
-
+    const checkScreen = this.$store.dispatch("mobileView");
     window.addEventListener("resize", checkScreen);
-  },
-  methods: {
-    toggleMobile() {
-      return this.$store.dispatch("toggleMobile");
-    },
   },
 };
 </script>
-
-<style lang="scss">
-.mobile {
-  display: none !important;
+<style>
+#dashboard {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.slides-enter-active,
-.slides-enter-leave {
-  transition: 0.8s ease all;
-}
-.slides-enter-from,
-.slides-enter-to {
-  transform: translateX(-22%);
-}
-.dashboard .width {
-  width: 100% !important;
-}
-@media (min-width: 315px) and (max-width: 768px) {
-  main .content-in-main {
-    width: 100% !important;
+@media (min-width: 200px) and (max-width: 340px) {
+  .main-view {
+    height: 90%;
+    left: 0;
+    width: 100%;
+  }
+  #sidebar {
+    width: 220px;
+    z-index: 1111 !important;
+  }
+  .slideSide {
+    margin-left: -220px !important;
+  }
+  .slideFooter {
+    width: 15% !important;
+  }
+  .footerSlide {
+    width: 85% !important;
+  }
+  .footerMenu {
+    width: 85% !important;
+    left: 15% !important;
+  }
+  #header-dash {
+    width: 100%;
   }
 }
+@media (min-width: 340px) and (max-width: 720px) {
+  .main-view {
+    height: 90%;
+    left: 0;
+    width: 100%;
+  }
+  #sidebar {
+    width: 280px;
+    z-index: 1111 !important;
+  }
+  .slideSide {
+    margin-left: -280px !important;
+  }
+  .slideFooter {
+    width: 15% !important;
+  }
+  .footerSlide {
+    width: 85% !important;
+  }
+  .footerMenu {
+    width: 85% !important;
+    left: 15% !important;
+  }
+  #header-dash {
+    width: 100%;
+  }
+}
+@media (min-width: 820px) and (max-width: 1180px) {
+  .main-view {
+    height: 100%;
+    left: 37%;
+    border: 1px solid black;
+    width: 63%;
+  }
+  #header-dash {
+    width: 63%;
+  }
+  #sidebar {
+    width: 300px;
+  }
+
+  .slideSide {
+    margin-left: -300px !important;
+  }
+  .slideFooter {
+    width: 10% !important;
+  }
+  .footerSlide {
+    width: 90% !important;
+  }
+  .footerMenu {
+    width: 90% !important;
+    left: 10% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 819px) {
+  .main-view {
+    height: 100%;
+    left: 39.2%;
+    border: 1px solid black;
+    width: 60.8%;
+  }
+  #header-dash {
+    width: 60%;
+  }
+  #sidebar {
+    width: 300px;
+  }
+
+  .slideSide {
+    margin-left: -300px !important;
+  }
+  .slideFooter {
+    width: 10% !important;
+  }
+  .footerSlide {
+    width: 90% !important;
+  }
+  .footerMenu {
+    width: 90% !important;
+    left: 10% !important;
+  }
+}
+/* @media (min-width: 912px) and (max-width: 1368px) {
+  .main-view {
+    height: 100%;
+    left: 33%;
+    border: 1px solid black;
+    width: 67%;
+  }
+  #header {
+    width: 67%;
+  }
+  #sidebar {
+    width: 300px;
+  }
+
+  .slideSide {
+    margin-left: -300px !important;
+  }
+  .slideFooter {
+    width: 10% !important;
+  }
+  .footerSlide {
+    width: 90% !important;
+  }
+  .footerMenu {
+    width: 90% !important;
+    left: 10% !important;
+  }
+} */
 </style>

@@ -1,16 +1,30 @@
-<!-- <template>
-  <div id="what-people-say" class="p-5 position-relative">
-    <h1 class="text-white text-center">What</h1>
-    <div class="row m-0 mt-3 p-0 card-track" ref="card">
+<template>
+  <div id="what-people-say" class="p-5">
+    <h1 class="text-white text-center">
+      What other student have said about us
+    </h1>
+    <div class="d-inline-flex m-0 mt-3 p-0 card-track bg-success" ref="card">
       <Comment v-for="what in whatStudentSaid" :what="what" :key="what.id" />
     </div>
-    <div class="nav">
-      <button class="left start-0 ms-2" @click="slideLeft">
-        <i class="fa-solid fa-angle-left my-auto mx-4 fs-4 fw-bolder"></i>
-      </button>
-      <button class="right end-0 me-2" @click="slideRight">
-        <i class="fa-solid fa-angle-right my-auto mx-4 fs-4 fw-bolder"></i>
-      </button>
+    <div class="nav m-0">
+      <div class="left bg-light">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div class="indicators d-inline-flex mx-auto">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="right">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -52,16 +66,34 @@ export default {
           profile: "Student",
           color: "orange",
         },
+        {
+          message:
+            "Online Library has been the best learning platform that have known, they also have a tutorial for better understanding of some complex courses and it is very efficient for learning purpose. Thank you Online Library.",
+          firstName: "Yusuph",
+          lastName: "Husman",
+          profile: "Student",
+          color: "orange",
+        },
+        {
+          message:
+            "Online Library has been the best learning platform that have known, they also have a tutorial for better understanding of some complex courses and it is very efficient for learning purpose. Thank you Online Library.",
+          firstName: "Tinuoye",
+          lastName: "Ronke",
+          profile: "Student",
+          color: "orange",
+        },
       ],
-      index: 0,
     };
   },
-  mounted() {
-    const cardTrack = this.$refs.card;
-    console.log("client width", cardTrack.clientWidth);
-  },
   methods: {
-    slideLeft() {},
+    next() {
+      return this.$store.dispatch("nextRoll");
+    },
+  },
+  computed: {
+    transX() {
+      return this.$store.state.nextRoll;
+    },
   },
   components: {
     Comment,
@@ -73,14 +105,46 @@ export default {
   min-height: 80vh;
   width: 100%;
   background-color: rgb(1, 1, 39);
-  .nav button {
+  // overflow: hidden;
+  .card-track {
+    overflow: hidden;
+    width: 100%;
+    transition: all 200ms;
+  }
+  .nav .left,
+  .right {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // z-index: 1;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .indicators div {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    margin: 2px;
+    border-radius: 10px;
+    z-index: 1111;
+  }
+  .left {
+    left: 10px;
+  }
+  .right {
+    right: 10px;
   }
 }
-</style> -->
+@media (min-width: 280px) and (max-width: 480px) {
+  #what-people-say {
+    padding: 20px !important;
+  }
+}
+</style>

@@ -10,7 +10,7 @@
           <img src="../../assets/Ebooks-imgs/Google.jpeg" alt="" />
         </div>
         <div class="col-lg-6">
-          <h2 class="fw-bold">Score up to 7+ band on your first IELTS exam</h2>
+          <h1 class="fw-bold">Score up to 7+ band on your first IELTS exam</h1>
           <ul class="list-unstyled mt-3">
             <li>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
@@ -51,6 +51,12 @@
           </button>
         </div>
       </div>
+      <div class="row m-0">
+        <div class="col-lg-6 d-flex justify-content-center">
+          <img src="../../assets/Ebooks-imgs/Ielts_examinal.png" alt="" />
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -71,9 +77,12 @@ export default {
   height: 50vh;
   background-color: #000000;
 }
-#ebook .container-fluid span {
-  background-color: darkgoldenrod;
-  padding: 20px;
+#ebook .container-fluid h1 span {
+  background-color: transparent;
+  border: 5px solid #fff;
+  height: 100px;
+  width: 100px;
+  padding: 0 10px;
 }
 #ebook .container-fluid h1 {
   margin: auto 20px;

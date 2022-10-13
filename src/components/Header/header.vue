@@ -2,10 +2,10 @@
   <div id="header">
     <nav class="navbar navbar-expand-lg navbar-dark px-lg-5 py-lg-3">
       <div class="container-fluid">
-        <router-link :to="{ name: Home }" class="navbar-brand">
+        <router-link to="{ name: Home }" class="navbar-brand">
           <img
-            class="w-50 h-50"
-            src="../../assets/Category_img/icons/LibraryLogoWhite.png"
+            style="width: 150px"
+            src="../../assets/Category_img/icons/LibraryTuT_white.png"
             alt=""
           />
         </router-link>
@@ -55,7 +55,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../assets/variable.scss";
 .navbar {
   background-color: $background-color;

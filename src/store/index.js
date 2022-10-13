@@ -5,6 +5,7 @@ import globalAxios from "axios";
 import book_store from "./modules/book_store";
 import ebook_store from "./modules/ebook_store";
 import router from "../router/index";
+import sideBar from "../store/modules/sideBar";
 
 Vue.use(Vuex);
 
@@ -190,5 +191,6 @@ export default new Vuex.Store({
   modules: {
     book_store,
     ebook_store,
+    sideBar,
   },
 });

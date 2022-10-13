@@ -2,47 +2,41 @@ import books from "../../data/books_data";
 
 const state = {
   books: [],
-  mobile: null,
-  mobileNav: null,
+  clickedMenu: false,
+  mobileView: false,
   windowWidth: null,
+  footerSlide: false,
+  // footerSlide: false,
 };
 
 const mutations = {
   SET_BOOKS(state, books) {
-    for (let i = 0; i < books.lenght; i++) {
-      for (let j = 0; j < books[i].computerScience.length; j++) {
-        state.books = books[i].computerScience[j];
-        console.log(books[i].computerScience[j]);
-      }
-    }
+    state.books = books;
+    console.log("regular books ", state.books);
   },
-  CHECK_SCREEN(state) {
+  TOGGLE_MENU(state) {
+    state.clickedMenu = !state.clickedMenu;
+    state.mobileView = false;
+    if (state.footerSlide == true) {
+      state.footerSlide = false;
+    }
+    console.log("slide side", state.clickedMenu);
+    console.log("slide footer", state.footerSlide);
+  },
+  MOBILE_CHECKSCREEN(state) {
     state.windowWidth = window.innerWidth;
     if (state.windowWidth >= 750) {
-      state.mobile = false;
-      state.mobileNav = true;
+      state.mobileView = true;
+      state.clickedMenu = false;
     } else {
-      state.mobile = true;
-      state.mobileNav = false;
+      state.mobileView = false;
+      state.clickedMenu = true;
     }
-
-    console.log(
-      "Mutation windowWidth",
-      state.windowWidth,
-      state.mobile,
-      state.mobileNav
-    );
   },
-  TOGGLE_NAV(state) {
-    state.mobileNav = !state.mobileNav;
-  },
-  TOGGLE_MOBO(state) {
-    window.document.addEventListener("click", () => {
-      if (state.mobile) {
-        state.mobileNav = false;
-      }
-      console.log(state.mobileNav, state.mobile);
-    });
+  SLIDE_FOOTER(state) {
+    state.footerSlide = !state.footerSlide;
+    console.log("slide side", state.clickedMenu);
+    console.log("slide footer", state.footerSlide);
   },
 };
 
@@ -50,14 +44,14 @@ const actions = {
   initBooks: ({ commit }) => {
     commit("SET_BOOKS", books);
   },
-  checkScreenSize: ({ commit }) => {
-    commit("CHECK_SCREEN");
+  toggleMenu: ({ commit }) => {
+    commit("TOGGLE_MENU");
   },
-  toggleNav: ({ commit }) => {
-    commit("TOGGLE_NAV");
+  mobileView: ({ commit }) => {
+    commit("MOBILE_CHECKSCREEN");
   },
-  toggleMobile: ({ commit }) => {
-    commit("TOGGLE_MOBO");
+  slideFooter: ({ commit }) => {
+    commit("SLIDE_FOOTER");
   },
 };
 
@@ -65,11 +59,11 @@ const getters = {
   books: (state) => {
     return state.books;
   },
-  mobileNav: (state) => {
-    return state.mobileNav;
+  slideFoota: (state) => {
+    return state.footerSlide;
   },
-  mobile: (state) => {
-    return state.mobile;
+  toggleSide: (state) => {
+    return state.clickedMenu;
   },
 };
 

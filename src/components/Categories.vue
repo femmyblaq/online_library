@@ -26,4 +26,9 @@ export default {
     font-size: 0.9rem;
   }
 }
+@media (min-width: 280px) and (max-width: 480px) {
+  #categories {
+    padding: 0 !important;
+  }
+}
 </style>

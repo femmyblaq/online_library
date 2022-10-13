@@ -7,13 +7,13 @@
 <script>
 import appBook from "../Books/Book.vue";
 export default {
+  data() {
+    return {};
+  },
   computed: {
     books() {
       return this.$store.getters.books;
     },
-  },
-  created() {
-    console.log("BBBBBOOOKKKS", this.books);
   },
   components: {
     appBook,

@@ -6,7 +6,7 @@
         <div
           class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
         >
-          <div style="width: 250px" class="card shadow m-4 rounded-0">
+          <div style="width: 250px" class="card shadow m-2 rounded-0">
             <img
               style="width: 100px; height: 100px"
               src="../assets/Category_img/icons/icons8-reading-100.png"
@@ -22,7 +22,7 @@
         <div
           class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
         >
-          <div style="width: 250px" class="card shadow m-4 rounded-0">
+          <div style="width: 250px" class="card shadow m-2 rounded-0">
             <img
               style="width: 100px; height: 100px"
               src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
@@ -38,7 +38,7 @@
         <div
           class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
         >
-          <div style="width: 250px" class="card shadow m-4 rounded-0">
+          <div style="width: 250px" class="card shadow m-2 rounded-0">
             <img
               style="width: 100px; height: 100px"
               src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
@@ -54,7 +54,7 @@
         <div
           class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
         >
-          <div style="width: 250px" class="card shadow m-4 rounded-0">
+          <div style="width: 250px" class="card shadow m-2 rounded-0">
             <img
               style="width: 100px; height: 100px"
               src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
@@ -77,14 +77,19 @@
     <p v-if="email" class="text-success fw-bolder">
       your email is: {{ email }}
     </p>
+    <AppBook />
   </div>
 </template>
 <script>
+import AppBook from "../views/Books/Books.vue";
 export default {
   computed: {
     email() {
       return !this.$store.getters.user ? false : this.$store.getters.user.email;
     },
+  },
+  components: {
+    AppBook,
   },
   created() {
     this.$store.dispatch("fetchUser");

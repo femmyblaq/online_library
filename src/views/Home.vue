@@ -96,90 +96,44 @@
       </h3>
     </div>
     <div id="mid-content">
-      <div class="overlay-container-another">
-        <div class="overlay-another"></div>
-
-        <img
-          src="../../public/img/homeBackground.png"
-          class="w-100 background-img"
-          alt=""
-        />
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="content-card row m-0 p-0">
-            <!-- <div class="d-flex justify-content-evenly"> -->
-            <div
-              class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
-            >
-              <div style="width: 250px" class="card m-4 rounded-0">
-                <img
-                  style="width: 100px; height: 100px"
-                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
-                  alt=""
-                  class="m-auto"
-                />
-                <hr class="m-0 p-0" />
-                <p class="bg-light fs-6 p-2 m-0 fw-bold">
-                  <span
-                    >Read anywhere: on your smartphone, tablet or computer</span
-                  >
-                </p>
-              </div>
+      <div class="row m-0 my-5 px-lg-4">
+        <div class="col-lg-6 px-4">
+          <h5 class="fw-light">INTRODUCTION</h5>
+          <h1 class="fw-bold">
+            A Simple Subscribtion for all your books online.
+          </h1>
+          <p>
+            For years now, we have discover that most Student's can not afford
+            schools, textbooks or any skills. which made my team worked towards
+            making a better life for you all. Also you would be given access to
+            upload any complex questions for better understanding. So get
+            unlimited access to all the available books and animated videos for
+            demonstration purpose and better learning experience, when ever you
+            need them, at a price that works perfectly for you. Choose a
+            flexible monthly plan, or save money on an annual subscribtion.
+          </p>
+          <div class="btn btn-lg mt-3" style="background-color: #f5167e">
+            Start a free trial
+          </div>
+        </div>
+        <div class="col-lg-6 half">
+          <div class="row m-0">
+            <div class="col-md-6 col-sm-12 text-center">
+              <img
+                src="../assets/Category_img/EbookShelf.png"
+                alt=""
+                class=""
+              />
+              <h5 class="mt-3">unlimited access to over 10,000 books</h5>
             </div>
-            <div
-              class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
-            >
-              <div style="width: 250px" class="card m-4 rounded-0">
-                <img
-                  style="width: 100px; height: 100px"
-                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
-                  alt=""
-                  class="m-auto"
-                />
-                <hr class="m-0 p-0" />
-                <p class="bg-light fs-6 p-2 m-0 fw-bold">
-                  <span
-                    >Read anywhere: on your smartphone, tablet or computer</span
-                  >
-                </p>
-              </div>
+            <div class="col-md-6 col-sm-12 text-center sec">
+              <img
+                src="../assets/Category_img/AnimatedVid.png"
+                alt=""
+                class=" "
+              />
+              <h5 class="mt-3">Get access to videos on some complex topics.</h5>
             </div>
-            <div
-              class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
-            >
-              <div style="width: 250px" class="card m-4 rounded-0">
-                <img
-                  style="width: 100px; height: 100px"
-                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
-                  alt=""
-                  class="m-auto"
-                />
-                <hr class="m-0 p-0" />
-                <p class="bg-light fs-6 p-2 m-0 fw-bold">
-                  <span
-                    >Read anywhere: on your smartphone, tablet or computer</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div
-              class="col-lg-3 col-md-6 col-sm-6 p-0 d-flex justify-content-center"
-            >
-              <div style="width: 250px" class="card m-4 rounded-0">
-                <img
-                  style="width: 100px; height: 100px"
-                  src="../assets/Category_img/icons/icons8-desk-lamp-100.png"
-                  alt=""
-                  class="m-auto"
-                />
-                <hr class="m-0 p-0" />
-                <p class="bg-light fs-6 p-2 m-0 fw-bold">
-                  <span
-                    >Read anywhere: on your smartphone, tablet or computer</span
-                  >
-                </p>
-              </div>
-            </div>
-            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -211,23 +165,15 @@
           </p>
         </div>
         <div class="col-lg-6 col-sm-6 my-4">
-          <div class="card p-4 rounded-1">
-            <div class="card-body text-center">
-              <h6 class="text-center">MONTHLY</h6>
-              <h1 style="font-size: 5rem">
-                $10 <small class="fs-6">USD</small>
-              </h1>
-            </div>
+          <div class="card p-4 rounded-1 shadow">
+            <h6 class="text-center">MONTHLY</h6>
+            <h1 style="font-size: 5rem">$10 <small class="fs-6">USD</small></h1>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 my-4">
-          <div class="card p-4 rounded-3">
-            <div class="card-body text-center">
-              <h6 class="text-center">YEARLY</h6>
-              <h1 style="font-size: 5rem">
-                $99<small class="fs-6">USD</small>
-              </h1>
-            </div>
+          <div class="card p-4 rounded-1 shadow">
+            <h6 class="text-center">YEARLY</h6>
+            <h1 style="font-size: 5rem">$99<small class="fs-6">USD</small></h1>
           </div>
         </div>
       </div>
@@ -241,14 +187,14 @@
             <div class="d-inline-flex">
               <span class="fs-4 text-secondary">+</span>
               <a
-                class="text-decoration-none"
+                class="text-decoration-none text-dark"
                 data-bs-toggle="collapse"
                 href="#collapseExample"
                 role="button"
                 aria-expanded="false"
                 aria-controls="collapseExample"
               >
-                <p class="ps-3 fs-5 m-auto">
+                <p class="ps-3 m-auto">
                   How do we understand some books without we been thought, for
                   example Mathematics?
                 </p>
@@ -267,14 +213,14 @@
           </li>
           <li class="py-2">
             <a
-              class="text-decoration-none d-flex d-inline"
+              class="text-decoration-none text-dark d-flex d-inline"
               data-bs-toggle="collapse"
               href="#collapseExample2"
               role="button"
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5">
+              <p class="mb-0 ps-3">
                 After learning according to the steps your are giving us, as if
                 we are in University, Are we to write test or exams online?
               </p></a
@@ -295,15 +241,15 @@
           </li>
           <li class="py-2">
             <a
-              class="text-decoration-none d-flex d-inline"
+              class="text-decoration-none text-dark d-flex d-inline"
               data-bs-toggle="collapse"
               href="#collapseExample3"
               role="button"
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5">
-                Won't they be free trier for at least a month?
+              <p class="mb-0 ps-3">
+                Won't they be free trial for at least a month?
               </p></a
             >
             <ul class="collapse px-4 list-unstyled" id="collapseExample3">
@@ -322,14 +268,14 @@
           </li>
           <li class="py-2">
             <a
-              class="text-decoration-none d-flex d-inline"
+              class="text-decoration-none text-dark d-flex d-inline"
               data-bs-toggle="collapse"
               href="#collapseExample4"
               role="button"
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5">
+              <p class="mb-0 ps-3">
                 would any of the books be downloadable for quick uses?
               </p></a
             >
@@ -349,14 +295,14 @@
           </li>
           <li class="py-2">
             <a
-              class="text-decoration-none d-flex d-inline"
+              class="text-decoration-none text-dark d-flex d-inline"
               data-bs-toggle="collapse"
               href="#collapseExample4"
               role="button"
               aria-expanded="false"
               aria-controls="collapseExample"
               ><span class="fs-4 text-secondary">+</span>
-              <p class="mb-0 ps-3 fs-5">
+              <p class="mb-0 ps-3">
                 What if we are no longer interested in Subscribing anymore?
               </p></a
             >
@@ -392,6 +338,9 @@ export default {
     WhatPeopleSay,
     appBooksCategories,
     appStaff,
+  },
+  created() {
+    return this.$store.dispatch("initBooks");
   },
 };
 </script>
@@ -438,6 +387,11 @@ export default {
 }
 #book-choice h2 {
   font-family: $font-family;
+}
+
+#mid-content p {
+  font-size: larger;
+  font-weight: 400;
 }
 
 #faq span {
@@ -506,12 +460,30 @@ export default {
       height: 200px !important;
     }
   }
+  #mid-content .half {
+    margin: 30px 0;
+
+    .sec {
+      margin-top: 20px;
+    }
+  }
   #pricing {
     width: 100% !important;
     padding: 20px !important;
-  }
-  #pricing .card {
-    margin: 15px 5px !important;
+
+    .row {
+      width: 100% !important;
+    }
+    .card {
+      margin: 15px 5px !important;
+      border: 2px solid #00008b;
+
+      h6,
+      h1 {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
   }
 }
 @media (min-width: 481px) and (max-width: 580px) {

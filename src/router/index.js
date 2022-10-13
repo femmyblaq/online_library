@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Hero from "../views/Home.vue";
+import Home from "../views/Home.vue";
 import ContactPage from "../views/ContactPage";
 import LoginPage from "../views/Login.vue";
 import RegisterPage from "../views/Register.vue";
@@ -16,8 +16,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Hero",
-    component: Hero,
+    name: "Home",
+    component: Home,
+    mata: {
+      title: "Home",
+    },
   },
   {
     path: "/about",
@@ -25,10 +28,16 @@ const routes = [
 
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    mata: {
+      title: "About",
+    },
   },
   {
     path: "/dashboard",
     component: TheLayout,
+    mata: {
+      title: "Dashboard",
+    },
     // beforeEnter(from, to, next) {
     //   if (!store.state.idToken) {
     //     next();
@@ -39,7 +48,7 @@ const routes = [
     children: [
       {
         path: "/dashboard",
-        name: "Home",
+        name: "Dashboard",
         component: () => import("../components/Dashboard.vue"),
         beforeEnter(from, to, next) {
           if (store.state.idToken) {
@@ -48,27 +57,39 @@ const routes = [
             next("/login");
           }
         },
+        mata: {
+          title: "Dashboard - Home",
+        },
       },
       {
         path: "/category",
         name: "Categories",
         component: () => import("../components/Categories.vue"),
+        mata: {
+          title: "Category",
+        },
       },
     ],
   },
   {
-    path: "/sublayout",
+    path: "/dashboard",
     component: TheSubLayout,
     children: [
       {
-        path: "/computer_science",
+        path: "/category/:computer_science",
         name: "ComputerScience",
         component: () => import("../components/ComputerScience.vue"),
+        mata: {
+          title: "Computer Science",
+        },
       },
       {
-        path: "/category",
+        path: "/category/:mathematics",
         name: "Mathematics",
         component: () => import("../components/ComputerScience.vue"),
+        mata: {
+          title: "mathematics",
+        },
       },
     ],
   },
@@ -101,6 +122,9 @@ const routes = [
     path: "/register",
     name: "Register",
     component: RegisterPage,
+    meta: {
+      title: "Register",
+    },
   },
 ];
 
@@ -108,6 +132,10 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
+  next();
 });
 
 export default router;

@@ -1,170 +1,187 @@
-/*****
 <template>
   <div>
-    <!-- <div v-if="mobileNavs"> -->
-    <div id="sidebar">
-      <div class="sidebar-content vh-100 bg-primary shadow">
-        <div class="w-75 p-3 m-auto brand d-flex">
-          <img
-            src="../../assets/Category_img/icons/LibraryLogoWhite.png"
-            alt=""
-          />
-        </div>
-
-        <ul class="list-unstyled mt-2">
-          <router-link
-            tag="li"
-            class="p-2"
-            to="/dashboard"
-            active-class="active"
-            ><a class="links mb-2 text-decoration-none fs-6 text-white"
-              ><span class="me-2"><i class="fas fa-home"></i></span> Home</a
-            ></router-link
-          >
-          <router-link tag="li" class="p-2" to="/category" active-class="active"
-            ><a class="links mb-2 text-decoration-none fs-6 text-white"
-              ><span class="me-2"
+    <div
+      id="sidebar"
+      class="position-fixed shadow"
+      :class="{ slideFooter: footerSlide, slideSide: toggleSideBar }"
+    >
+      <div
+        style="background-color: #010130"
+        class="brand d-flex justify-content-around text-center p-3"
+      >
+        <img
+          src="../../assets/Category_img/icons/LibraryTuT_white.png"
+          class=""
+          v-if="!footerSlide"
+          v-show="!toggleSideBar"
+        />
+        <i
+          v-else
+          class="icons fa-solid fa-oil-well m-auto text-danger fa-2x"
+        ></i>
+        <h1
+          class="text-secondary fw-bold d-lg-none my-auto"
+          @click="menuToggle"
+          v-show="!footerSlide"
+        >
+          &times;
+        </h1>
+      </div>
+      <div class="sidebar-content d-flex justify-content-center">
+        <ul class="list-unstyled navbar-nav w-100">
+          <router-link tag="li" to="dashboard" active-class="active"
+            ><a
+              v-show="!toggleSideBar"
+              class="nav-link text-decoration-none fs-6 py-2"
+              ><span class="mx-3"><i class="fas fa-home"></i> </span>
+              <span v-if="!footerSlide">Home</span></a
+            >
+          </router-link>
+          <router-link tag="li" active-class="active" to="/category"
+            ><a
+              v-show="!toggleSideBar"
+              class="nav-link text-decoration-none fs-6"
+              ><span class="mx-3"
                 ><i class="fa fa-list-alt" aria-hidden="true"></i
               ></span>
-              Categories</a
-            ></router-link
-          >
-          <router-link
-            tag="li"
-            class="p-2"
-            to="/dashboard"
-            active-class="active"
-            ><a class="links mb-2 text-decoration-none fs-6 text-white"
-              ><span class="me-2"><i class="far fa-bookmark"></i></span> Saved
-              for Later</a
-            ></router-link
-          >
-          <router-link
-            tag="li"
-            class="p-2"
-            to="/dashboard"
-            active-class="active"
-            ><a class="links mb-2 text-decoration-none fs-6 text-white"
-              >Account</a
-            ></router-link
-          >
+              <span v-if="!footerSlide">Categories</span>
+            </a>
+          </router-link>
+          <router-link tag="li" to="save" active-class="active">
+            <a
+              v-show="!toggleSideBar"
+              class="nav-link text-decoration-none fs-6"
+              ><span class="mx-3"><i class="far fa-bookmark"></i></span>
+              <span v-if="!footerSlide"> Saved for Later</span></a
+            >
+          </router-link>
+          <router-link tag="li" to="/account" activeClass="active">
+            <a
+              v-show="!toggleSideBar"
+              class="nav-link text-decoration-none fs-6"
+              ><span class="mx-3"><i class="fa-regular fa-user"></i></span>
+              <span v-if="!footerSlide"> Account</span></a
+            >
+          </router-link>
         </ul>
       </div>
+      <div class="">
+        <div
+          @click="closeSide"
+          class="sidebar-footer d-flex justify-content-end position-absolute bottom-0 fload-end"
+          v-show="footerSlide"
+        >
+          <!-- <div class="d-flex justify-content-end align-items-center"> -->
+          <i class="fa-solid fa-angle-right my-auto mx-4 fs-4 fw-bolder"></i>
+          <!-- </div> -->
+        </div>
+      </div>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 <script>
 export default {
-  // computed: {
-  //   closeSideBar() {
-  //     return this.$store.dispatch("toggleNav");
-  //   },
-  //},
+  data() {
+    return {
+      // footerSlide: null,
+    };
+  },
+  methods: {
+    closeSide() {
+      this.$store.dispatch("slideFooter");
+      console.log("i got clicked");
+    },
+    menuToggle() {
+      return this.$store.dispatch("toggleMenu");
+    },
+  },
+  computed: {
+    toggleSideBar() {
+      return this.$store.getters.toggleSide;
+    },
+    footerSlide() {
+      return this.$store.getters.slideFoota;
+    },
+  },
 };
 </script>
 <style lang="scss">
-#header .dropdown .dropdown-toggle::after {
-  content: none;
+.slideSide {
+  margin-left: -22% !important;
+  transition: 0.5s ease all;
 }
-#sidebar .sidebar-content {
+.slideFooter {
+  width: 4% !important;
+  transition: 0.5s ease all;
+}
+#sidebar {
   width: 22%;
-  position: fixed;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.5s ease all;
+  background-color: #00001f;
 }
-#sidebar .bg-primary {
-  background-color: #00001f !important;
+#sidebar .brand {
+  min-height: 50px;
+  width: 100%;
 }
-#sidebar .show {
-  display: none;
+#sidebar .brand img {
+  width: 70%;
 }
-#sidebar .list-unstyled li {
-  border-left: 2px solid #ac7d0c;
+#sidebar .nav-link {
+  color: #ccc;
 }
-#sidebar .list-unstyled .active {
-  background-color: #101557;
+.icons {
+  min-width: 40px;
+  min-height: 40px;
 }
-#sidebar .list-unstyled li:hover {
-  background-color: #ac7d0c;
-}
-// Animating the sideBar
 
-@media (min-width: 280px) and (max-width: 620px) {
-  #header .header-content {
-    width: 100% !important;
-    position: relative !important;
-  }
-  #sidebar .sidebar-content h5 {
-    font-size: 1.4rem;
-  }
-  #sidebar .sidebar-content {
-    width: 100% !important;
-    max-width: 180px !important;
-    height: 100vh !important;
-    padding: 0 !important;
-    background-color: #00001f !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #sidebar .sidebar-content .brand {
-    margin: 0 !important;
-    padding: 5px;
-    width: 100% !important;
-  }
-  #sidebar .sidebar-content .list-unstyled .links {
-    padding: 10px !important;
-    margin-bottom: 15px;
-  }
+#sidebar .sidebar-content ul li {
+  width: 100%;
+  color: #f0f0f0;
+  cursor: pointer;
 }
-@media (min-width: 310px) and (max-width: 660px) {
-  #header .header-content {
-    width: 100% !important;
-    position: relative !important;
-  }
-  #sidebar .sidebar-content {
-    width: 100% !important;
-    max-width: 250px !important;
-    height: 100vh !important;
-    padding: 10px !important;
-    background-color: #00001f !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #sidebar .sidebar-content .brand {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  #sidebar .sidebar-content .list-unstyled .links {
-    padding: 10px !important;
-    margin-bottom: 15px;
-  }
+#sidebar .sidebar-content ul li a,
+#sidebar .brand img {
+  transition: 0.2s;
 }
-@media (min-width: 400px) and (max-width: 980px) {
-  #header .header-content {
-    width: 100% !important;
-    position: relative !important;
-  }
-  #sidebar .sidebar-content {
-    width: 100% !important;
-    max-width: 250px !important;
-    height: 100vh !important;
-    padding: 10px !important;
-    background-color: #00001f !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  #sidebar .sidebar-content .brand {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  #sidebar .sidebar-content .list-unstyled .links {
-    padding: 10px !important;
-    margin-bottom: 15px;
-  }
+#sidebar .sidebar-content ul li.active {
+  font-weight: 500;
+  background-color: rgb(13, 1, 68);
 }
+#sidebar .sidebar-content ul li.active a {
+  color: #fff;
+}
+
+#sidebar .sidebar-content ul li:hover {
+  background-color: #010130;
+  color: #fff !important;
+}
+#sidebar .sidebar-content ul li:hover a {
+  color: #fff !important;
+}
+#sidebar .sidebar-footer {
+  width: 100%;
+  height: 50px;
+  background-color: #010130;
+  cursor: pointer;
+  transition: all 1s;
+}
+#sidebar .sidebar-footer:hover {
+  background-color: #010130;
+  color: #fff !important;
+}
+#sidebar .sidebar-footer:hover i {
+  color: #ccc;
+}
+#sidebar .sidebar-footer i {
+  color: #929191;
+  transition: color 1s;
+}
+/* @media (min-width: 340px) and (max-width: 720px) {
+  .slideFooter {
+    width: 40px !important;
+  }
+} */
 </style>

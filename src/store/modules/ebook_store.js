@@ -1,23 +1,30 @@
 import datas from "../../data/books_data";
 const state = {
   ebooks: [],
+  nextRoll: null,
 };
 const mutations = {
   SET_EBOOKS(state) {
     for (let i = 0; i < datas.length; i++) {
       state.ebooks = datas[i].ebooks;
-      // for (let j = 0; j < state.ebooks.length; j++) {
-      //   state.ebooks = ebooks[i].ebooks[j];
-      //   console.log("state ebook 01", state.ebooks);
+      // let ebooks = datas[i].ebooks;
+      // for (let k = 0; k < ebooks.length; k++) {
+      //   state.ebooks = ebooks.ebooks[k];
       // }
     }
-    // state.ebooks = ebooks;
-    console.log("state ebook 02", state.ebooks);
+    // for (let data in datas) {
+    //   state.ebooks = data;
+    // }
+    // state.ebooks = datas;
+    console.log("state ebook", state.ebooks);
   },
 };
 const actions = {
   setEbooks({ commit }) {
-    commit("SET_EBOOKS", datas);
+    commit("SET_EBOOKS", datas.ebooks);
+  },
+  nextRoll({ commit }) {
+    commit("NEXT");
   },
 };
 const getters = {

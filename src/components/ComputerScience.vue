@@ -9,21 +9,21 @@
       />
 
       <div class="position-relative ms-4 pt-5">
-        <p>{{ $route.params }}</p>
+        <!-- <p>{{ $route.params }}</p> -->
         <h3 class="fs-1 fw-bold" style="margin-top: 8rem">
           <img
             style="width: 80px; height: 80px"
             src="../assets/Category_img/computer-science-colour.svg"
             alt=""
           />
-          Computer Science
+          {{ computerScience[0].category }}
         </h3>
       </div>
     </div>
     <div class="tabs my-5 mx-4">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <div
+          <button
             class="nav-link active"
             id="home-tab"
             data-bs-toggle="tab"
@@ -32,26 +32,9 @@
             role="tab"
             aria-controls="home"
             aria-selected="true"
-            ref="filter"
-            @click="toggleFilter"
           >
-            <span>Level 1</span>
-            <ul v-show="filterMenu" class="list-unstyled position-absolute">
-              <li
-                id="level-two"
-                data-bs-toggle="tab"
-                data-bs-target="#level"
-                type="button"
-                role="tab"
-                aria-controls="home"
-                aria-selected="true"
-              >
-                Level 2
-              </li>
-              <li>Level 3</li>
-              <li>Level 4</li>
-            </ul>
-          </div>
+            Books <span></span>
+          </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
@@ -64,7 +47,7 @@
             aria-controls="profile"
             aria-selected="false"
           >
-            Related books
+            Related books <span></span>
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -78,39 +61,18 @@
             aria-controls="contact"
             aria-selected="false"
           >
-            skills
+            Videos <span></span>
           </button>
         </li>
       </ul>
       <div class="tab-content mt-4" id="myTabContent">
         <div
-          class="tab-pane fade show active"
+          class="tab-pane fade"
           id="home"
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-          <div v-if="level" id="levelOne">
-            <h1>Level one</h1>
-            <app-book></app-book>
-          </div>
-          <h1>Level two</h1>
-
-          <app-book></app-book>
-          <h1>Level Three</h1>
-          <app-book></app-book>
-          <div v-if="selectedLevel == 'level Four'" id="levelThree">
-            <h1>Level Three</h1>
-            <app-book></app-book>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade show"
-          id="level"
-          role="tabpane1"
-          aria-labelledby="level-two"
-        >
-          <h1>Level Three</h1>
-          <app-book></app-book>
+          Books
         </div>
         <div
           class="tab-pane fade"
@@ -118,40 +80,50 @@
           role="tabpanel"
           aria-labelledby="profile-tab"
         >
-          <h1>Level one</h1>
-          <app-book></app-book>
+          Profile tab
         </div>
         <div
           class="tab-pane fade"
           id="contact"
           role="tabpanel"
           aria-labelledby="contact-tab"
-        ></div>
+        >
+          Dont know
+        </div>
       </div>
     </div>
     <!-- Select Tab  -->
-    <div class="w-25 pb-5">
-      <select name="level" id="level" class="" v-model="levels">
-        <option :value="level.id" v-for="level in levels" :key="level">
+    <!-- <div class="w-25 pb-5 form-group">
+      <select name="level" id="level" class="form-control" v-model="levels">
+        <option :value="level.id" v-for="level in levels" :key="level.id">
           {{ level.text }}
         </option>
       </select>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
-import appBook from "../views/Books/Books.vue";
+// import appBook from "../views/Books/Books.vue";
 export default {
   data() {
-    return {
-      filterMenu: false,
-      levels: [
-        { id: 1, text: "Level 1" },
-        { id: 2, text: "Level 2" },
-        { id: 3, text: "Level 3" },
-        { id: 4, text: "Level 4" },
-      ],
-    };
+    return {};
+  },
+  created() {
+    this.$store.dispatch("initBooks");
+    console.log(this.computerScience);
+  },
+  computed: {
+    computerScience() {
+      return this.$store.getters.books.filter(
+        (el) => el.category === "Computer Science"
+      );
+      // cs.filter(el => el.category === "Computer Science");
+      // return
+    },
+  },
+  mounted() {
+    this.computer_science = this.$route.params.this.computerScience;
+    console.log("Mounted Route", this.computer_science);
   },
   methods: {
     toggleFilter() {
@@ -159,7 +131,7 @@ export default {
     },
   },
   components: {
-    appBook,
+    // appBook,
   },
 };
 </script>
@@ -172,10 +144,21 @@ export default {
   height: 400px;
 }
 .tabs {
+  .nav-tabs {
+    border-bottom: none;
+  }
   .nav-link {
+    margin: 0 20px;
+    border-radius: 5px;
+    background-color: #ddd;
+    color: #000;
     ul {
       transition: display 1s;
     }
+  }
+  .nav-link.active {
+    background-color: rgb(252, 63, 167);
+    color: #fff;
   }
 }
 </style>

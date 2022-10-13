@@ -1,9 +1,10 @@
 <template>
   <div id="footer" class="">
     <div class="footer-top w-100 h-75 m-0 py-4 container-fluid row p-0 m-0">
-      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 logo">
+      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-4 logo">
         <img
-          src="../../assets/Category_img/icons/LibraryLogoWhite.png"
+          style="width: 150px"
+          src="../../assets/Category_img/icons/LibraryTuT_white.png"
           alt=""
         />
         <p class="text-white">
@@ -13,8 +14,8 @@
           resources, promote group learning and improve knowledge and skills.
         </p>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white links">
-        <h5 class="fw-bold pb-3">USEFUL LINKS</h5>
+      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-4 text-white links">
+        <h5 class="pb-2">USEFUL LINKS</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
             <a href="" class="text-decoration-none">Home</a>
@@ -33,24 +34,69 @@
           </li>
         </ul>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white contact">
-        <h5 class="fw-bold pb-3">CONTACT US</h5>
-        <p class="mt-3">
-          No 9, Chief fatai aremu street, <br />
-          Ajegunle Apapa, <br />Lagos, Nigeria.
-        </p>
-        <p><span class="fw-bold">Email:</span> info@onlineLibrary.com</p>
-        <p><i class="fas fa-phone me-2"></i> +2349016290149</p>
-        <p><i class="fab fa-whatsapp me-2"></i> +2349016290149</p>
-        <ul class="list-unstyled d-flex d-inline-row m-0">
-          <li class=""><i class="fab fa-facebook fa-2x pe-3 pt-3"></i></li>
-          <li class=""><i class="fab fa-instagram fa-2x p-3"></i></li>
-          <li class=""><i class="fab fa-linkedin-in fa-2x p-3"></i></li>
-          <li class=""><i class="fab fa-google fa-2x p-3"></i></li>
-        </ul>
+      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-4 text-white contact">
+        <h5 class="pb-2">LEARN</h5>
+        <div class="row m-0">
+          <div class="col-6 ps-0">
+            <ul class="list-unstyled m-0">
+              <router-link tag="li" to="/">
+                <a href="">Architecture</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Mathematics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Economics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Computer Science</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Medicine</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Chemistry</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Phisics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Business</a>
+              </router-link>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled m-0">
+              <router-link tag="li" to="/">
+                <a href="">Architecture</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Mathematics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Economics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Computer Science</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Medicine</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Chemistry</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Phisics</a>
+              </router-link>
+              <router-link tag="li" to="/">
+                <a href="">Business</a>
+              </router-link>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-5 text-white newsletter">
-        <h5 class="fw-bold pb-3">OUR NEWSLETTER</h5>
+      <div class="col-lg-3 col-md-6 col-sm-6 p-lg-4 text-white newsletter">
+        <h5 class="pb-2">OUR NEWSLETTER</h5>
         <p class="text-white py-lg-3">
           Stay informed with what we have been unto.
         </p>
@@ -68,15 +114,23 @@
         </div>
       </div>
     </div>
-    ,
+    <hr class="bg-light px-5" />
     <div class="container-fluid footer-bottom p-0 m-0">
-      <div class="row m-0 text-center">
+      <div class="row m-0">
         <div class="col-lg-6 m-auto">
           <p class="mb-0 text-white">
             Copy right 2022 <span class="fw-bold">Online Library.</span> All
             Right Reserved
           </p>
           <p class="text-white">Designed by <span>Dev HY</span></p>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-end">
+          <ul class="list-unstyled text-end d-inline-flex m-0">
+            <li class=""><i class="fab fa-facebook"></i></li>
+            <li class=""><i class="fab fa-instagram px-2"></i></li>
+            <li class=""><i class="fab fa-linkedin-in pe-2"></i></li>
+            <li class=""><i class="fab fa-google"></i></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -91,6 +145,7 @@ $background-color: #00001f;
 }
 #footer .footer-top h5 {
   color: #fddd2a;
+  font-size: 1rem;
 }
 #footer p,
 #footer li,
